@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Combine : MonoBehaviour
+{
+    public bool isCombine;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void OnCombine()
+    {
+        isCombine = true;
+    }
+
+    public void OffCombine()
+    {
+        isCombine = false;
+    }
+}

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Box
+  - Sq1
+  - Sq10
+  - Sq2
+  - Sq3
+  - Sq4
+  - Sq5
+  - Sq6
+  - Sq7
+  - Sq8
+  - Sq9
+  - Sq10c
+  - Left
+  - Right
+  - Trash
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Box
+  - Water
+  - UI
+  - 10Box
+  - Drawing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Every
+    uniqueID: 536228959
+    locked: 0
+  - name: Back
+    uniqueID: 2571848763
+    locked: 0
