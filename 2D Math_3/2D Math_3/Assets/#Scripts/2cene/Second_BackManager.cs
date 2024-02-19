@@ -5,7 +5,7 @@ using UnityEngine;
 public class Second_BackManager : MonoBehaviour
 {
 
-
+    public Second_SizeMultiple second_SizeMultiple;
     // public int count;
 
     //public int sq10;             // 10개짜리 박스 
@@ -63,7 +63,44 @@ public class Second_BackManager : MonoBehaviour
         // 모두 지우기 기능을 활용하는 스크립트라서 가장 최근에 들어온 오브젝트를 검색하고 복사함 ( 이 스크립트에 기능을 넣은 이유 )
         if (BackGroundList[BackGroundList.Count - 1].transform.position.x <= 3.2f)
         {
-            Vector3 CopyObjSpawn = new Vector3(BackGroundList[BackGroundList.Count - 1].transform.position.x + 0.45f, BackGroundList[BackGroundList.Count - 1].transform.position.y, BackGroundList[BackGroundList.Count - 1].transform.position.z);
+            float GetCorrectionValue ( int sizeText )
+            {
+                switch ( sizeText )
+                {
+                    case 1:
+                        return 0.25f;
+                    case 2:
+                        return 0.32f; // 예시값, 필요에 따라 변경 가능
+                    case 3:
+                        return 0.4f; // 예시값, 필요에 따라 변경 가능
+                    case 4:
+                        return 0.45f; // 예시값, 필요에 따라 변경 가능
+                    case 5:
+                        return 0.55f; // 예시값, 필요에 따라 변경 가능
+                    default:
+                        return 0f; // 예외 처리
+                }
+            }
+
+            Vector3 CopyObjSpawn = Vector3. zero; // Vector3 초기화
+
+            // sizeText 값에 따라 CopyObjSpawn 설정하는 코드
+            if ( second_SizeMultiple. SizeText >= 1 && second_SizeMultiple. SizeText <= 5 )
+            {
+                float correctionValue = GetCorrectionValue ( second_SizeMultiple. SizeText );
+
+                CopyObjSpawn = new Vector3 (
+                    BackGroundList [ BackGroundList. Count - 1 ]. transform. position. x + correctionValue ,
+                    BackGroundList [ BackGroundList. Count - 1 ]. transform. position. y ,
+                    BackGroundList [ BackGroundList. Count - 1 ]. transform. position. z );
+            }
+            else
+            {
+                // sizeText가 범위를 벗어나는 경우 예외 처리
+                Debug. LogError ( "sizeText 값이 범위를 벗어납니다." );
+            }
+
+
             GameObject clone = Instantiate(BackGroundList[BackGroundList.Count - 1], CopyObjSpawn, Quaternion.identity);
             clone.name = BackGroundList[BackGroundList.Count - 1].name;
             clone.transform.parent = ObjBox.transform;
