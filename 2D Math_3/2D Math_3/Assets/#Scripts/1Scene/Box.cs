@@ -672,6 +672,7 @@ public class Box : MonoBehaviour
         #endregion
 
         #region 옆칸 큐브삭제 
+        // check 1의 기능 = 놓을 때 삭제하겠따~
         if(other.CompareTag("Left") && this.gameObject.CompareTag("Sq1") && Check == 1)
          {
             Destroy(this.gameObject);

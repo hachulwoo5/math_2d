@@ -29,6 +29,8 @@ public class ResetAllBt : MonoBehaviour
         // 펜 상태에서 도형 클릭 시 펜모드 해제 + 도형 드래그 모드 활성화, 컬러 UI 초기화
         if(this.gameObject.name == "ColorUi_Init")
         {
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
             drawable.GetComponent<BoxCollider2D>().enabled = false;
             drawable.isPenMode = false;
             dragmode.isDragMode = true;

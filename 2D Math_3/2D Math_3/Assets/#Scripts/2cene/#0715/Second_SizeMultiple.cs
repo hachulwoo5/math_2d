@@ -32,10 +32,16 @@ public class Second_SizeMultiple : MonoBehaviour
 
     ShapesSpawnArea shapesSpawnArea;
 
+    Vector3 pos1, pos2, pos3, pos4;
+
     void Awake()
     {
         shapesSpawnArea = GameObject.Find("ShapeSpawnColiider").GetComponent<ShapesSpawnArea>();
         ObjBox = GameObject.Find("ObjBox");
+        pos1= GameObject.Find("Circle Green").transform.position;
+        pos2 = GameObject.Find("Circle Red").transform.position;
+        pos3 = GameObject.Find("Circle Blue").transform.position;
+        pos4 = GameObject.Find("Circle Yellow").transform.position;
     }
 
 
@@ -72,9 +78,10 @@ public class Second_SizeMultiple : MonoBehaviour
         
 
         SizeText++;
-        SizeMp += 0.2f;
+        SizeMp += 0.25f;
 
         int index = GameObject.Find("GameManager").GetComponent<Second_GameManager>().Index_;
+        // index는 도형번호 1~4 원 삼각 사각 오각 
         switch(index)
         {
             case 1:
@@ -113,7 +120,7 @@ public class Second_SizeMultiple : MonoBehaviour
 
         
         SizeText--;
-        SizeMp -= 0.2f;
+        SizeMp -= 0.25f;
         int index = GameObject.Find("GameManager").GetComponent<Second_GameManager>().Index_;
         switch (index)
         {
@@ -150,7 +157,7 @@ public class Second_SizeMultiple : MonoBehaviour
         
         Vector3 CopyObjSpawn = new Vector3(-4.6f, 0.2f, 0);
 
-        GameObject clone = Instantiate(What, CopyObjSpawn, Quaternion.identity);
+        GameObject clone = Instantiate(What, pos1, Quaternion.identity);
         clone.name = "GreenObj";
         clone.transform.localScale = new Vector3(0.033f * SizeMp, 0.033f * SizeMp, 0.033f * SizeMp);
         clone.transform.parent = ObjBox.transform;
@@ -160,7 +167,7 @@ public class Second_SizeMultiple : MonoBehaviour
     {
 
         Vector3 CopyObjSpawn = new Vector3(-4.6f, -0.6f, 0);
-        GameObject clone = Instantiate(What, CopyObjSpawn, Quaternion.identity);
+        GameObject clone = Instantiate(What, pos2, Quaternion.identity);
         clone.name = "RedObj";
         clone.transform.localScale = new Vector3(0.033f * SizeMp, 0.033f * SizeMp, 0.033f * SizeMp);
         clone.transform.parent = ObjBox.transform;
@@ -171,7 +178,7 @@ public class Second_SizeMultiple : MonoBehaviour
     {
 
         Vector3 CopyObjSpawn = new Vector3(-4.6f, -1.4f, 0);
-        GameObject clone = Instantiate(What, CopyObjSpawn, Quaternion.identity);
+        GameObject clone = Instantiate(What, pos3, Quaternion.identity);
         clone.name = "BlueObj";
         clone.transform.localScale = new Vector3(0.033f * SizeMp, 0.033f * SizeMp, 0.033f * SizeMp);
         clone.transform.parent = ObjBox.transform;
@@ -182,7 +189,7 @@ public class Second_SizeMultiple : MonoBehaviour
     {
 
         Vector3 CopyObjSpawn = new Vector3(-4.6f, -2.2f, 0);
-        GameObject clone = Instantiate(What, CopyObjSpawn, Quaternion.identity);
+        GameObject clone = Instantiate(What, pos4, Quaternion.identity);
         clone.name = "YellowObj";
         clone.transform.localScale = new Vector3(0.033f * SizeMp, 0.033f * SizeMp, 0.033f * SizeMp);
         clone.transform.parent = ObjBox.transform;

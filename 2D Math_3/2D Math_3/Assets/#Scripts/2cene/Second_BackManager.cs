@@ -46,7 +46,15 @@ public class Second_BackManager : MonoBehaviour
 
     public void RemoveList(GameObject gameObject)
     {
-        BackGroundList.Remove(gameObject);
+        if (!BackGroundList.Contains(gameObject)) // 리스트에 해당 게임 오브젝트가 없는 경우
+        {
+            return; // 함수 종료
+        }
+        else
+        {
+            BackGroundList.Remove(gameObject);
+
+        }
     }
     public void RecentlyPlus()
     {

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\#Scripts\Manager.cs" />
+    <Compile Include="Assets\#Scripts\Common\PenManager.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\BGmanager1.cs" />
     <Compile Include="Assets\#Scripts\Scene1Manager.cs" />
     <Compile Include="Assets\#Scripts\DragMode.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\#Scripts\GameManager.cs" />
     <Compile Include="Assets\#Scripts\AwakeScene.cs" />
     <Compile Include="Assets\#Scripts\BoxSnap.cs" />
+    <Compile Include="Assets\#Scripts\BackGroundScritps\EraserZone.cs" />
     <Compile Include="Assets\#Scripts\LongBox.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\BGmanager2.cs" />
     <Compile Include="Assets\#Scripts\2cene\#0715\Second_SizeMultiple.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Assets\#Scripts\2cene\Second_Drag.cs" />
     <Compile Include="Assets\#Scripts\Scene2Manager.cs" />
     <Compile Include="Assets\#Scripts\2cene\Second_GameManager.cs" />
+    <Compile Include="Assets\#Scripts\BackGroundScritps\MustErazer.cs" />
     <Compile Include="Assets\#Scripts\ChooseSceneManager.cs" />
     <Compile Include="Assets\#Scripts\1Scene\First_Drag.cs" />
     <Compile Include="Assets\#Scripts\Scene3Manager.cs" />

@@ -16,6 +16,9 @@ namespace FreeDraw
         Second_BackManager second_BackManager;
         BGmanager1 bGmanager1;
         BGmanager2 bGmanager2;
+
+
+        public PenManager penManager;
         void Awake()
         {
 
@@ -61,7 +64,8 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
-
+            
+            penManager.PenColorChanger(213, 1, 0);
         }
         public void SetMarkerGreen()
         {
@@ -71,6 +75,9 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
+            penManager.PenColorChanger(20, 160, 82);
+
+
         }
         public void SetMarkerBlue()
         {
@@ -80,7 +87,7 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
-
+            penManager.PenColorChanger(2, 46, 117);
 
         }
         public void SetMarkerCyan()
@@ -91,6 +98,8 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
+            penManager.PenColorChanger(1, 159, 232);
+
         }
         public void SetMarkerYellow()
         {
@@ -100,6 +109,8 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
+            penManager.PenColorChanger(255, 211, 7);
+
         }
         public void SetMarkerOrange()
         {
@@ -109,6 +120,8 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
+            penManager.PenColorChanger(254, 122, 6);
+
         }
         public void SetMarkerBrown()
         {
@@ -118,6 +131,8 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
+            penManager.PenColorChanger(0, 0, 0);
+
         }
         public void SetMarkerPink()
         {
@@ -127,9 +142,11 @@ namespace FreeDraw
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
             Drawable.Pen_Width = 1;
+            penManager.PenColorChanger(233, 104, 161);
+
         }
         #endregion
-       
+
 
         public void SetEraser()
         {
@@ -157,6 +174,7 @@ namespace FreeDraw
         {
             bGmanager1 = GameObject.Find("BackGround_1").GetComponent<BGmanager1>();
             bGmanager2 = GameObject.Find("BackGround_2").GetComponent<BGmanager2>();
+
             for (int i = bGmanager1.BoxList.Count - 1; i >= 0; i--)
             {
                 Destroy(bGmanager1.BoxList[i]);

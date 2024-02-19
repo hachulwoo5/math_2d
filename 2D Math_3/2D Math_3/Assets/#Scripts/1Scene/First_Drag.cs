@@ -15,12 +15,16 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     ResetMaster reset;
     public bool isDraging;
 
+    Vector3 originPosition;
+
+
     GameObject ObjBox;
     private void Awake()
     {
         dragmode = GameObject.Find("DragManager").GetComponent<DragMode>();
         drawable = GameObject.Find("DrawMaster").GetComponent<FreeDraw.Drawable>();
         ObjBox = GameObject.Find("ObjBox");
+        originPosition = this.transform.position;       // 물체를 원 위치에 복사하기 위한 값 초기화
 
     }
     private void Update()
@@ -31,17 +35,16 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (this.gameObject.transform.position.x < -3.5f)
         {
-            // peu button, function all off
             drawable.GetComponent<BoxCollider2D>().enabled = false;
             drawable.isPenMode = false;
             dragmode.isDragMode = true;
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
 
             reset = GameObject.Find("ResetMaster").GetComponent<ResetMaster>();
             reset.resetmaster();
 
-
         }
-        
+
         if (dragmode.isDragMode == true)       // 드래그 모드가 켜져야 움직임, 꺼지면 그림을 그리는 모드가 되는 것
         {
 
@@ -53,8 +56,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (SqObject.name == "Sq10")
             {
-                Vector3 Sq10Spawn = new Vector3(-4.88f, 1.6f, 0);
-                if (SqObject.transform.position == Sq10Spawn)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
+                if (SqObject.transform.position.x <= -4.88f)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
                 {
                     Sq10spawn();
                 }
@@ -62,8 +64,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (SqObject.name == "Sq1")
             {
-                Vector3 Sq1Spawn = new Vector3(-3.98f, 1.6f, 0);
-                if (SqObject.transform.position == Sq1Spawn)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
+                if (SqObject.transform.position.x <= -4.17f)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
                 {
                     Sq1spawn();
                 }
@@ -98,6 +99,8 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             drawable.GetComponent<BoxCollider2D>().enabled = false;
             drawable.isPenMode = false;
             dragmode.isDragMode = true;
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
             reset = GameObject.Find("ResetMaster").GetComponent<ResetMaster>();
             reset.resetmaster();
 
@@ -114,8 +117,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (SqObject.name == "Sq10")
             {
-                Vector3 Sq10Spawn = new Vector3(-4.88f, 1.6f, 0);
-                if (SqObject.transform.position == Sq10Spawn)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
+                if (SqObject.transform.position.x <= -4.88f)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
                 {
                     Sq10spawn();
                 }
@@ -123,8 +125,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
             if (SqObject.name == "Sq1")
             {
-                Vector3 Sq1Spawn = new Vector3(-3.98f, 1.6f, 0);
-                if (SqObject.transform.position == Sq1Spawn)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
+                if (SqObject.transform.position.x<= -4.17f)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
                 {
                     Sq1spawn();
                 }
@@ -157,16 +158,14 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void Sq10spawn()
     {
-        Vector3 Sq10Spawn = new Vector3(-4.88f, 1.6f, 0);            // 해당 위치에서 복사됨
-        GameObject clone = Instantiate(SqObject, Sq10Spawn, Quaternion.identity);
+        GameObject clone = Instantiate(SqObject, originPosition, Quaternion.identity);
         clone.name = "Sq10";
         clone.transform.parent = ObjBox.transform;
     }       // 10개짜리 도형 소환
 
     public void Sq1spawn()
     {
-        Vector3 Sq1Spawn = new Vector3(-3.98f, 1.6f, 0);              // 해당 위치에서 복사됨
-        GameObject clone = Instantiate(SqObject, Sq1Spawn, Quaternion.identity);
+        GameObject clone = Instantiate(SqObject, originPosition, Quaternion.identity);
         clone.name = "Sq1";
         clone.transform.parent = ObjBox.transform;
 

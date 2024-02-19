@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class Second_Drag : MonoBehaviour
 {
     public GameObject CloneObj;
@@ -184,15 +185,11 @@ public class Second_Drag : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if (other.CompareTag("ClearArea") && this.gameObject.CompareTag("Box") && Check == 1)      // Check = 1 >> 마우스 놓을 때 사라지게 
-        {
-            backGruondManager.RemoveList(this.gameObject);
-            Destroy(this.gameObject);
-        }
+        
 
         else if (other.CompareTag("Trash") && Check == 1)
         {
-            backGruondManager.RemoveList(this.gameObject);
+            
             Destroy(this.gameObject);
             GameObject.Find("Trash").GetComponent<AudioSource>().Play();
         }

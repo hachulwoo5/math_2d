@@ -16,9 +16,14 @@ public class ActiveOnObj : MonoBehaviour
 
     ShapesSpawnArea shapesSpawnArea;
     public  GameObject ObjBox;
+
+     Vector3 pos1, pos2, pos3, pos4;
+
+
     void Awake()
     {
         shapesSpawnArea = GameObject.Find("ShapeSpawnColiider").GetComponent<ShapesSpawnArea>();
+       
         //ObjBox = GameObject.Find("ObjBox");
     }
 
@@ -40,7 +45,8 @@ public class ActiveOnObj : MonoBehaviour
     public void GreenObjon()    
     {
         float size = GameObject.Find("SizeMultiple").GetComponent<Second_SizeMultiple>().SizeMp;
-        Vector3 CopyObjSpawn = new Vector3(-4.6f, 0.2f, 0);
+        Vector3 CopyObjSpawn = new Vector3(-4.633057f, 0.1999512f, 0);
+
 
         GameObject clone = Instantiate(GreenObj, CopyObjSpawn, Quaternion.identity);
         clone.name = "GreenObj";
@@ -52,7 +58,7 @@ public class ActiveOnObj : MonoBehaviour
     {
         float size = GameObject.Find("SizeMultiple").GetComponent<Second_SizeMultiple>().SizeMp;
 
-        Vector3 CopyObjSpawn = new Vector3(-4.6f, -0.6f, 0);
+        Vector3 CopyObjSpawn = new Vector3(-4.633057f, -0.5999756f, 0);
         GameObject clone = Instantiate(RedObj, CopyObjSpawn, Quaternion.identity);
         clone.name = "RedObj";
         clone.transform.localScale = new Vector3(0.033f * size, 0.033f * size, 0.033f * size);
@@ -64,7 +70,7 @@ public class ActiveOnObj : MonoBehaviour
     {
         float size = GameObject.Find("SizeMultiple").GetComponent<Second_SizeMultiple>().SizeMp;
 
-        Vector3 CopyObjSpawn = new Vector3(-4.6f, -1.4f, 0);
+        Vector3 CopyObjSpawn = new Vector3(-4.633057f, -1.400024f, 0);
         GameObject clone = Instantiate(BlueObj, CopyObjSpawn, Quaternion.identity);
         clone.name = "BlueObj";
         clone.transform.localScale = new Vector3(0.033f * size, 0.033f * size, 0.033f * size);
@@ -76,7 +82,7 @@ public class ActiveOnObj : MonoBehaviour
     {
         float size = GameObject.Find("SizeMultiple").GetComponent<Second_SizeMultiple>().SizeMp;
 
-        Vector3 CopyObjSpawn = new Vector3(-4.6f, -2.2f, 0);
+        Vector3 CopyObjSpawn = new Vector3(-4.633057f, -2.199951f, 0);
         GameObject clone = Instantiate(YellowObj, CopyObjSpawn, Quaternion.identity);
         clone.name = "YellowObj";
         clone.transform.localScale = new Vector3(0.033f * size, 0.033f * size, 0.033f * size);

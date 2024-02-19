@@ -366,7 +366,8 @@ namespace FreeDraw
             CyanPenOn.SetActive(false);
             BrownPenOn.SetActive(false);
             OrangePenOn.SetActive(false);
-            
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
 
         }
 
@@ -394,6 +395,8 @@ namespace FreeDraw
             CyanPenOn.SetActive(false);
            
             EraserPenOn.SetActive(false);
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
 
         public void RedPenOnBt()
@@ -452,6 +455,9 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
 
         public void BluePenOnBt()
@@ -481,6 +487,8 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+
         }
 
         public void BluePenOffBt()
@@ -508,6 +516,10 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
+
         }
 
         public void GreenPenOnBt()
@@ -564,9 +576,12 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
 
-      
+
 
         public void CyanPenOnBt()
         {
@@ -622,6 +637,9 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
         public void PinkPenOnBt()
         {
@@ -677,6 +695,9 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
         public void YellowPenOnBt()
         {
@@ -733,6 +754,9 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
         public void OrangePenOnBt()
         {
@@ -788,6 +812,9 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
         public void BrownPenOnBt()
         {
@@ -843,6 +870,9 @@ namespace FreeDraw
             OrangePenOn.SetActive(false);
 
             EraserPenOn.SetActive(false);
+
+            GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
+
         }
 
         public void ResetAllBt()

@@ -43,10 +43,13 @@ public class Drag : MonoBehaviour, IPointerUpHandler
 
     private void OnMouseDown()      // 마우스 클릭시 물체 복사
     {
+
+       
         if (this.gameObject.transform.position.x < -2f)
         {
             // peu button, function all off
             resetAllBt.On_OffBt();
+
         }
 
         Check = 0;
@@ -167,10 +170,14 @@ public class Drag : MonoBehaviour, IPointerUpHandler
 
     public void OnPointerDown(PointerEventData eventData)      // 마우스 클릭시 물체 복사
     {
+        
+
+        
         if (this.gameObject.transform.position.x < -2f)
         {
             // peu button, function all off
             resetAllBt.On_OffBt();
+
         }
 
         Check = 0;
@@ -334,13 +341,11 @@ public class Drag : MonoBehaviour, IPointerUpHandler
     {
         if (other.CompareTag("ClearArea") && this.gameObject.CompareTag("Box") && Check == 1)      // Check = 1 >> 마우스 놓을 때 사라지게 
         {
-            backGruondManager.RemoveList(this.gameObject);
             Destroy(this.gameObject);
         }
 
-        else if (other.CompareTag("Trash") && Check == 1)
+        else if (other.CompareTag("Trash") && this.gameObject.CompareTag("Box") &&  Check == 1)
         {
-            backGruondManager.RemoveList(this.gameObject);
             Destroy(this.gameObject);
             GameObject.Find("Trash").GetComponent<AudioSource>().Play();
         }
