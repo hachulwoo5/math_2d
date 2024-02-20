@@ -17,6 +17,7 @@ public class Drag : MonoBehaviour, IPointerUpHandler
     ResetAllBt resetAllBt;
     GameManager gameManager;
     BackGruondManager backGruondManager;
+    ResetMaster reset;
 
     public bool isDraging;
     public bool isOnEnable = false;
@@ -49,7 +50,8 @@ public class Drag : MonoBehaviour, IPointerUpHandler
         {
             // peu button, function all off
             resetAllBt.On_OffBt();
-
+            reset = GameObject. Find ( "ResetMaster3" ). GetComponent<ResetMaster> ( );
+            reset. resetmaster ( );
         }
 
         Check = 0;
@@ -177,7 +179,8 @@ public class Drag : MonoBehaviour, IPointerUpHandler
         {
             // peu button, function all off
             resetAllBt.On_OffBt();
-
+            reset = GameObject. Find ( "ResetMaster3" ). GetComponent<ResetMaster> ( );
+            reset. resetmaster ( );
         }
 
         Check = 0;

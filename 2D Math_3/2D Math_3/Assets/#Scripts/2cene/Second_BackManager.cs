@@ -67,6 +67,8 @@ public class Second_BackManager : MonoBehaviour
             {
                 switch ( sizeText )
                 {
+                    // return 수치들은 얼마나 띄울건지, 콜라이더 길이로 편하게 로직 짜고 싶었는데 polygon 오각형 오브젝트가 엉망이라 수동으로 함..
+                    // 아래 수치를 변경하면 복사할 때 도형 크기(1~5)마다 생성되는 거리를 조절 가능 
                     case 1:
                         return 0.25f;
                     case 2:

@@ -18,6 +18,8 @@ public class Second_Drag : MonoBehaviour
     GameManager gameManager;
     Second_BackManager backGruondManager;
 
+    ResetMaster reset;
+
     public bool isDraging;
     public bool isOnEnable = false;
     int Check;
@@ -48,6 +50,8 @@ public class Second_Drag : MonoBehaviour
         {
             // peu button, function all off
             resetAllBt.On_OffBt();
+            reset = GameObject. Find ( "ResetMaster2" ). GetComponent<ResetMaster> ( );
+            reset. resetmaster ( );
         }
 
         Check = 0;
@@ -83,6 +87,8 @@ public class Second_Drag : MonoBehaviour
         {
             // peu button, function all off
             resetAllBt.On_OffBt();
+            reset = GameObject. Find ( "ResetMaster" ). GetComponent<ResetMaster> ( );
+            reset. resetmaster ( );
         }
 
         Check = 0;

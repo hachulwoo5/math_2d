@@ -78,7 +78,7 @@ public class Second_SizeMultiple : MonoBehaviour
         
 
         SizeText++;
-        SizeMp += 0.25f;
+        SizeMp += 0.4f;
 
         int index = GameObject.Find("GameManager").GetComponent<Second_GameManager>().Index_;
         // index는 도형번호 1~4 원 삼각 사각 오각 
@@ -120,9 +120,9 @@ public class Second_SizeMultiple : MonoBehaviour
 
         
         SizeText--;
-        SizeMp -= 0.25f;
+        SizeMp -= 0.4f;
         int index = GameObject.Find("GameManager").GetComponent<Second_GameManager>().Index_;
-        switch (index)
+        switch (index)      // index는 도형번호 1원, 2삼각형, 3사각형, 4오각형
         {
             case 1:
                 GreenObjon(Circle_G);

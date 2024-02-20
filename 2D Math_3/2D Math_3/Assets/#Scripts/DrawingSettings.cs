@@ -17,7 +17,7 @@ namespace FreeDraw
         BGmanager1 bGmanager1;
         BGmanager2 bGmanager2;
 
-
+        public GameObject[] penImage; // 펜 투명하게 바꾸는 용도 , 지우개 때
         public PenManager penManager;
         void Awake()
         {
@@ -152,8 +152,32 @@ namespace FreeDraw
         {
 
             SetMarkerColour(new Color(0, 0, 0, 0));
-            Drawable.Pen_Width = 12;
 
+            for ( int i = 0 ; i < penImage. Length ; i++ )
+            {
+                SpriteRenderer spriteRenderer = penImage [ i ]. GetComponent<SpriteRenderer> ( );
+                Color currentColor = spriteRenderer. color;
+                Color newColor = new Color ( currentColor. r , currentColor. g , currentColor. b , 78f / 255f );
+                spriteRenderer. color = newColor;
+
+            }
+
+            Drawable. Pen_Width = 12;
+
+        }
+
+        public void SetDraw ( ) // 펜 투명해제
+        {
+
+
+            for ( int i = 0 ; i < penImage. Length ; i++ )
+            {
+                SpriteRenderer spriteRenderer = penImage [ i ]. GetComponent<SpriteRenderer> ( );
+                Color currentColor = spriteRenderer. color;
+                Color newColor = new Color ( currentColor. r , currentColor. g , currentColor. b , 1f );
+                spriteRenderer. color = newColor;
+
+            }
         }
 
         public void PartialSetEraser()
