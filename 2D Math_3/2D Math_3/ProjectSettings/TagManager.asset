@@ -26,6 +26,8 @@ TagManager:
   - Red
   - Black
   - BoldBut
+  - 4_MinusRight
+  - 4_MinusLeft
   layers:
   - Default
   - TransparentFX

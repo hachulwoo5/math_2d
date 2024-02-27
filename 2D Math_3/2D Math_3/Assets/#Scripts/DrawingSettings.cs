@@ -16,6 +16,10 @@ namespace FreeDraw
         Second_BackManager second_BackManager;
         BGmanager1 bGmanager1;
         BGmanager2 bGmanager2;
+        BGmanager1 bGmanager3;
+        BGmanager2 bGmanager4;
+        BGmanager1 bGmanager5;
+        BGmanager2 bGmanager6;
 
         public GameObject[] penImage; // Ææ Åõ¸íÇÏ°Ô ¹Ù²Ù´Â ¿ëµµ , Áö¿ì°³ ¶§
         public PenManager penManager;
@@ -194,21 +198,68 @@ namespace FreeDraw
             
 
         }
-        public void ResetAllCan1()
+        public void ResetAllCalculateScenes() // µ¡¼À »¬¼À °ö¼À
         {
-            bGmanager1 = GameObject.Find("BackGround_1").GetComponent<BGmanager1>();
-            bGmanager2 = GameObject.Find("BackGround_2").GetComponent<BGmanager2>();
+            if ( GameObject. Find ( "1Scene_RootGameObject" ) != null && GameObject. Find ( "1Scene_RootGameObject" ). activeSelf )
+            {
+                bGmanager1 = GameObject. Find ( "BackGround_1" ). GetComponent<BGmanager1> ( );
+                bGmanager2 = GameObject. Find ( "BackGround_2" ). GetComponent<BGmanager2> ( );
+                bGmanager5 = GameObject. Find ( "10ResetOnly" ). GetComponent<BGmanager1> ( );
+                bGmanager6 = GameObject. Find ( "1ResetOnly" ). GetComponent<BGmanager2> ( );
 
-            for (int i = bGmanager1.BoxList.Count - 1; i >= 0; i--)
-            {
-                Destroy(bGmanager1.BoxList[i]);
+                for ( int i = bGmanager1. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager1. BoxList [ i ] );
+                }
+                for ( int i = bGmanager2. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager2. BoxList [ i ] );
+                }
+                for ( int i = bGmanager5. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager5. BoxList [ i ] );
+                }
+                for ( int i = bGmanager6. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager6. BoxList [ i ] );
+                }
             }
-            for (int i = bGmanager2.BoxList.Count - 1; i >= 0; i--)
+            if ( GameObject. Find ( "4Scene_RootGameObject" ) != null && GameObject. Find ( "4Scene_RootGameObject" ). activeSelf )
             {
-                Destroy(bGmanager2.BoxList[i]);
+                bGmanager1 = GameObject. Find ( "BackGround_1" ). GetComponent<BGmanager1> ( );
+                bGmanager2 = GameObject. Find ( "BackGround_2" ). GetComponent<BGmanager2> ( );
+                bGmanager3 = GameObject. Find ( "BackGround_3" ). GetComponent<BGmanager1> ( );
+                bGmanager4 = GameObject. Find ( "BackGround_4" ). GetComponent<BGmanager2> ( );
+                bGmanager5 = GameObject. Find ( "10ResetOnly" ). GetComponent<BGmanager1> ( );
+                bGmanager6 = GameObject. Find ( "1ResetOnly" ). GetComponent<BGmanager2> ( );
+                for ( int i = bGmanager1. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager1. BoxList [ i ] );
+                }
+                for ( int i = bGmanager2. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager2. BoxList [ i ] );
+                }
+                for ( int i = bGmanager3. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager3. BoxList [ i ] );
+                }
+                for ( int i = bGmanager4. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager4. BoxList [ i ] );
+                }
+                for ( int i = bGmanager5. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager5. BoxList [ i ] );
+                }
+                for ( int i = bGmanager6. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager6. BoxList [ i ] );
+                }
             }
+           
         }
-        public void ResetAllCan2()
+        public void ResetAllCan2Scene() // »ö 4µµÇü Å¸ÀÏ
         {
             second_BackManager = GameObject.Find("BackGround").GetComponent<Second_BackManager>();
 
@@ -217,7 +268,7 @@ namespace FreeDraw
                 Destroy(second_BackManager.BackGroundList[i]);
             }
         }
-        public void ResetAllCan3()
+        public void ResetAllCan3Scene() // ºÐ¼ö Å¸ÀÏ
         {
             backGroundManager = GameObject.Find("BackGround").GetComponent<BackGruondManager>();
 

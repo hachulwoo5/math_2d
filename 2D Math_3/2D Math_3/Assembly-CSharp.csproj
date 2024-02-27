@@ -75,6 +75,7 @@
     <Compile Include="Assets\#Scripts\AwakeScene.cs" />
     <Compile Include="Assets\#Scripts\BoxSnap.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\EraserZone.cs" />
+    <Compile Include="Assets\#Prefab\4_MathPrefab\Sq10_OnlyCode.cs" />
     <Compile Include="Assets\#Scripts\LongBox.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\BGmanager2.cs" />
     <Compile Include="Assets\#Scripts\2cene\#0715\Second_SizeMultiple.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\#Scripts\ChooseSceneManager.cs" />
     <Compile Include="Assets\#Scripts\1Scene\First_Drag.cs" />
     <Compile Include="Assets\#Scripts\Scene3Manager.cs" />
+    <Compile Include="Assets\#Prefab\4_MathPrefab\Drag_4th.cs" />
     <Compile Include="Assets\#Scripts\UISpawnObj.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\BGmanager4.cs" />
     <Compile Include="Assets\#Scripts\ClearBackGround.cs" />

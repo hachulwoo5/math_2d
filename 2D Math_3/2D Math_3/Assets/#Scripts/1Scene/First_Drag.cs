@@ -14,6 +14,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     FreeDraw.Drawable drawable;
     ResetMaster reset;
     public bool isDraging;
+    SpriteRenderer spriteRenderer;
 
     Vector3 originPosition;
 
@@ -25,7 +26,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         drawable = GameObject.Find("DrawMaster").GetComponent<FreeDraw.Drawable>();
         ObjBox = GameObject.Find("ObjBox");
         originPosition = this.transform.position;       // 물체를 원 위치에 복사하기 위한 값 초기화
-
+        spriteRenderer = GetComponent<SpriteRenderer> ( );
     }
     private void Update()
     {
@@ -40,6 +41,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             dragmode.isDragMode = true;
             GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
 
+            spriteRenderer.sortingOrder = 11;
             reset = GameObject.Find("ResetMaster").GetComponent<ResetMaster>();
             reset.resetmaster();
 
@@ -53,8 +55,9 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             // 마우스 위치를 잡아내고 변환
             MinusPosition = this.transform.position - mousePosition1;
             // 마이너스 포지션 = 도형의 위치 - 마우스 포지션  >>> 도형의 중앙에만 마우스 포지션이 무조건적으로 잡히는 것 방지, 마우스가 물체의 위치를 어딜 잡든 잡은대로 사물이 그대로 따라옴 
+            spriteRenderer. sortingOrder = 11;
 
-            if (SqObject.name == "Sq10")
+            if ( SqObject.name == "Sq10")
             {
                 if (SqObject.transform.position.x <= -4.88f)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
                 {
@@ -90,6 +93,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnMouseUp()
     {
         isDraging = false;
+        spriteRenderer. sortingOrder = 10;
     }
 
     public void OnPointerDown(PointerEventData eventData)      // 마우스 클릭시 물체 복사
@@ -101,6 +105,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             dragmode.isDragMode = true;
             GameObject.Find("Pen").GetComponent<PenManager>().PenColorChangeBut();
 
+            spriteRenderer. sortingOrder = 11;
             reset = GameObject.Find("ResetMaster").GetComponent<ResetMaster>();
             reset.resetmaster();
 
@@ -114,8 +119,9 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             // 마우스 위치를 잡아내고 변환
             MinusPosition = this.transform.position - mousePosition1;
             // 마이너스 포지션 = 도형의 위치 - 마우스 포지션  >>> 도형의 중앙에만 마우스 포지션이 무조건적으로 잡히는 것 방지, 마우스가 물체의 위치를 어딜 잡든 잡은대로 사물이 그대로 따라옴 
+            spriteRenderer. sortingOrder = 11;
 
-            if (SqObject.name == "Sq10")
+            if ( SqObject.name == "Sq10")
             {
                 if (SqObject.transform.position.x <= -4.88f)   // 마우스로 잡은 사물 좌표가 특정 위치라면 복사 함수를 실행
                 {
@@ -153,6 +159,7 @@ public class First_Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerUp(PointerEventData eventData)
     {
         isDraging = false;
+        spriteRenderer. sortingOrder = 10;
     }
 
 

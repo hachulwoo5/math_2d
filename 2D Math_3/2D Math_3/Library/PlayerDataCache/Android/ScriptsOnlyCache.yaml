@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - Combine
     - Drag
     - DragMode
+    - Drag_4th
     - First_Drag
     - FreeDraw.Drawable
     - FreeDraw.DrawingSettings
@@ -30,6 +31,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -79,6 +81,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
@@ -105,6 +109,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1948}
     - Class: 114
       Script: {instanceID: 2104}
+    - Class: 114
+      Script: {instanceID: 2192}
     - Class: 114
       Script: {instanceID: 2200}
     - Class: 114
@@ -154,9 +160,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4560}
     - Class: 114
+      Script: {instanceID: 4640}
+    - Class: 114
       Script: {instanceID: 4656}
     - Class: 114
       Script: {instanceID: 4696}
+    - Class: 114
+      Script: {instanceID: 5002}
     - Class: 114
       Script: {instanceID: 5016}
     - Class: 114
@@ -165,71 +175,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5376}
     - Class: 114
       Script: {instanceID: 5518}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/#Scenes/StartScene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
-    - Class: 61
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1542}
-    - Class: 114
-      Script: {instanceID: 1638}
-    - Class: 114
-      Script: {instanceID: 1824}
-    - Class: 114
-      Script: {instanceID: 2192}
-    - Class: 114
-      Script: {instanceID: 2604}
-    - Class: 114
-      Script: {instanceID: 2766}
-    - Class: 114
-      Script: {instanceID: 2982}
-    - Class: 114
-      Script: {instanceID: 3218}
-    - Class: 114
-      Script: {instanceID: 3332}
-    - Class: 114
-      Script: {instanceID: 4640}
-    - Class: 114
-      Script: {instanceID: 5002}
+      Script: {instanceID: 48442}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -437,7 +384,7 @@ ScriptsOnlyBuild:
     className: Total
   - hash:
       serializedVersion: 2
-      Hash: 98cc512bfeb03b2d005a0bad80fc8514
+      Hash: 2e279c460b486bc31ffbcc6c1b91e7a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Second_BackManager
@@ -773,7 +720,7 @@ ScriptsOnlyBuild:
     className: Second_SizeMultiple
   - hash:
       serializedVersion: 2
-      Hash: 70a48fc2194f83c4ca27e836e54f6a21
+      Hash: 66b7d901332e245a17293d9ae20de12e
     assemblyName: Assembly-CSharp.dll
     namespaceName: FreeDraw
     className: DrawingSettings
@@ -1005,8 +952,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: bd1e7a00c81f67afbac5860985c3e836
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Drag_4th
   platform: 13
   scenePathNames:
-  - Assets/#Scenes/StartScene.unity
   - Assets/#Scenes/ChooseScene.unity
-  playerPath: "C:/hcw/OneDrive/\uBC14\uD0D5 \uD654\uBA74/\uBE4C\uB4DC/12345.apk"
+  playerPath: "C:/hcw/OneDrive/\uBC14\uD0D5 \uD654\uBA74/\uBE4C\uB4DC/0226.apk"

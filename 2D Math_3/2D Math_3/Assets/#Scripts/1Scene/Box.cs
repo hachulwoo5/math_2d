@@ -36,6 +36,7 @@ public class Box : MonoBehaviour
 
     GameObject ObjBox;
 
+    public GameObject Only_Sq10;
     private void Awake()
     {
         _boxCollider2D = GetComponent<BoxCollider2D>();
@@ -711,7 +712,15 @@ public class Box : MonoBehaviour
         }
         if (other.CompareTag("Right") && this.gameObject.CompareTag("Sq10") && Check == 1)
         {
-            Destroy(this.gameObject);
+            if ( GameObject. Find ( "4Scene_RootGameObject" ) != null && GameObject. Find ( "4Scene_RootGameObject" ). activeSelf )
+            {
+                CreateSurroundingObjects ( );
+            }
+           else
+            {
+                Destroy ( this. gameObject );
+
+            }
         }
         #endregion
 
@@ -777,7 +786,37 @@ public class Box : MonoBehaviour
 
 
     }
-    
+    void CreateSurroundingObjects ( )
+    {
+        // 원래 위치
+        Vector3 originalPosition = this. gameObject. transform. position;
+
+        // 원래 위치에 오브젝트 생성
+        InstantiateRow ( originalPosition , 5 );
+
+        // 아래쪽으로 이동한 위치
+        Vector3 newPosition = originalPosition;
+        newPosition. y -= 0.3f; // 이동할 거리
+
+        // 아래쪽으로 이동한 위치에 오브젝트 생성
+        InstantiateRow ( newPosition , 5 );
+
+        // 원래 오브젝트 삭제
+        Destroy ( this. gameObject );
+    }
+
+    void InstantiateRow ( Vector3 startPosition , int count )
+    {
+        // 시작 위치부터 count 개수만큼의 오브젝트를 생성합니다.
+        for ( int i = 0 ; i < count ; i++ )
+        {
+            // 오브젝트를 생성하고, 오른쪽으로 이동합니다.
+            Vector3 position = startPosition + new Vector3 ( 0.3f * i , 0 , 0 );
+            GameObject newObj = Instantiate ( Only_Sq10 , position , Quaternion. identity );
+            newObj. transform. parent = GameObject. Find ( "4Scene_RootGameObject" ). transform;
+        }
+    }
+
     IEnumerator Second()
     {
         yield return new WaitForSeconds(0.15f);

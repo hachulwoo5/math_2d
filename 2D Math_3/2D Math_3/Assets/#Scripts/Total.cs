@@ -11,20 +11,28 @@ public class Total : MonoBehaviour
 
     public TextMeshProUGUI maintotal;      // TMP 
 
-    public int bg1score;           // 이 스크립트에서 만든 변수
-    public int bg2score;          // 이 스크립트에서 만든 변수
-   
-    public int totalscore;           // 이 스크립트에서 만든 변수
+    public int bg1score;           
+    public int bg2score;
+    public int bg3score;
+    public int bg4score;
+
+
+
+    public int totalscore;           
 
    
-    public BGmanager1 bgmanager1;       // 스크립트 참조 
-    public BGmanager2 bgmanager2;       // 스크립트 참조 
-    
-   // public BGmanager5 bgmanager5;       // 스크립트 참조 
+    public GameObject bgmanager1;       // 스크립트 참조 
+    public GameObject bgmanager2;       // 스크립트 참조 
+    public GameObject bgmanager3;       // 스크립트 참조 
+    public GameObject bgmanager4;       // 스크립트 참조 
+
+
+
+    // public BGmanager5 bgmanager5;       // 스크립트 참조 
     //public BGmanager6 bgmanager6;       // 스크립트 참조 
 
 
-    void Start()
+    void Start ()
     {
 
         
@@ -36,13 +44,33 @@ public class Total : MonoBehaviour
     void Update()
     {
 
-       
-        bg1score = bgmanager1.count;           // 외부에서 점수 가져오기
-        bg2score = bgmanager2.count;           // 외부에서 점수 가져오기
-      
-        totalscore = bg1score + bg2score;        // 외부 모든 점수 합산
+        if ( GameObject. Find ( "1Scene_RootGameObject" ) != null && GameObject. Find ( "1Scene_RootGameObject" ). activeSelf )
+        {
+            bg1score = bgmanager1. GetComponent<BGmanager1> ( ). count;           // 외부에서 점수 가져오기
+            bg2score = bgmanager2. GetComponent<BGmanager2> ( ). count;
 
-        maintotal.text = totalscore.ToString();     // 합산 점수 출력
+            totalscore = bg1score + bg2score ;        // 외부 모든 점수 합산
+
+            maintotal. text = totalscore. ToString ( );     // 합산 점수 출력
+        }
+        else if ( GameObject. Find ( "1Scene_RootGameObject" ) != null && GameObject. Find ( "1Scene_RootGameObject" ). activeSelf )
+        {
+            // 1Scene_RootGameObject가 존재하고 활성화되어 있는 경우
+            // 원하는 작업을 수행합니다.
+        }
+
+        else if ( GameObject. Find ( "4Scene_RootGameObject" ) != null && GameObject. Find ( "4Scene_RootGameObject" ). activeSelf )
+        {
+            bg1score = bgmanager1. GetComponent<BGmanager1> ( ). count;           // 외부에서 점수 가져오기
+            bg2score = bgmanager2. GetComponent<BGmanager2> ( ). count;          // 외부에서 점수 가져오기
+            bg3score = bgmanager3. GetComponent<BGmanager1> ( ). count;
+            bg4score = bgmanager4. GetComponent<BGmanager2> ( ). count;
+
+            totalscore = ( bg1score + bg2score ) - ( bg3score + bg4score );        // 외부 모든 점수 합산
+
+            maintotal. text = totalscore. ToString ( );     // 합산 점수 출력
+        }
+        
     }
 
    
