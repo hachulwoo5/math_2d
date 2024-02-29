@@ -31,11 +31,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -148,35 +145,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3614}
     - Class: 114
-      Script: {instanceID: 4256}
+      Script: {instanceID: 4258}
     - Class: 114
-      Script: {instanceID: 4352}
+      Script: {instanceID: 4354}
     - Class: 114
-      Script: {instanceID: 4376}
+      Script: {instanceID: 4378}
     - Class: 114
-      Script: {instanceID: 4406}
+      Script: {instanceID: 4408}
     - Class: 114
-      Script: {instanceID: 4500}
+      Script: {instanceID: 4502}
     - Class: 114
-      Script: {instanceID: 4560}
+      Script: {instanceID: 4562}
     - Class: 114
-      Script: {instanceID: 4640}
+      Script: {instanceID: 4642}
     - Class: 114
-      Script: {instanceID: 4656}
+      Script: {instanceID: 4658}
     - Class: 114
-      Script: {instanceID: 4696}
+      Script: {instanceID: 4698}
     - Class: 114
-      Script: {instanceID: 5002}
+      Script: {instanceID: 5004}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5226}
+      Script: {instanceID: 5090}
     - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5230}
     - Class: 114
-      Script: {instanceID: 5518}
+      Script: {instanceID: 5380}
     - Class: 114
-      Script: {instanceID: 48442}
+      Script: {instanceID: 5522}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -378,7 +375,7 @@ ScriptsOnlyBuild:
     className: BGmanager3
   - hash:
       serializedVersion: 2
-      Hash: cbeed4dfb378bf4bc765ce9987acb51a
+      Hash: 5495ecc427d3f446d8868cb70d258c2f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Total
@@ -642,6 +639,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sq10_OnlyCode
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -726,7 +729,7 @@ ScriptsOnlyBuild:
     className: DrawingSettings
   - hash:
       serializedVersion: 2
-      Hash: 07f4a245304f8ca15ff0d9209c2c72ba
+      Hash: 41755040d699695058fa838d684a7b53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Box
@@ -876,6 +879,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: b3ffd07062b558d66dfe99d560735bb3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Drag_4th
+  - hash:
+      serializedVersion: 2
       Hash: a9af0fc353f18a3609d03a6e3af8068c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -952,12 +961,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: bd1e7a00c81f67afbac5860985c3e836
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Drag_4th
   platform: 13
   scenePathNames:
   - Assets/#Scenes/ChooseScene.unity

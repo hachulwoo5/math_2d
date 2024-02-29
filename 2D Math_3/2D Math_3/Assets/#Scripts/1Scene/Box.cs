@@ -36,6 +36,7 @@ public class Box : MonoBehaviour
 
     GameObject ObjBox;
 
+    [Header ( "4Scene 전용 / 10개 도형 1개로 변환" )]
     public GameObject Only_Sq10;
     private void Awake()
     {
@@ -712,9 +713,20 @@ public class Box : MonoBehaviour
         }
         if (other.CompareTag("Right") && this.gameObject.CompareTag("Sq10") && Check == 1)
         {
-            if ( GameObject. Find ( "4Scene_RootGameObject" ) != null && GameObject. Find ( "4Scene_RootGameObject" ). activeSelf )
+            if(other.gameObject.name=="BackGround_2"  )
             {
-                CreateSurroundingObjects ( );
+                if ( GameObject. Find ( "4Scene_RootGameObject" ) != null && GameObject. Find ( "4Scene_RootGameObject" ). activeSelf )
+                {
+                    CreateSurroundingObjects ( 1f );
+                }
+            }
+
+            if( other. gameObject. name == "BackGround_4")
+            {
+                if ( GameObject. Find ( "4Scene_RootGameObject" ) != null && GameObject. Find ( "4Scene_RootGameObject" ). activeSelf )
+                {
+                    CreateSurroundingObjects ( 0.5f );
+                }
             }
            else
             {
@@ -786,26 +798,26 @@ public class Box : MonoBehaviour
 
 
     }
-    void CreateSurroundingObjects ( )
+    void CreateSurroundingObjects (float a )
     {
         // 원래 위치
         Vector3 originalPosition = this. gameObject. transform. position;
 
         // 원래 위치에 오브젝트 생성
-        InstantiateRow ( originalPosition , 5 );
+        InstantiateRow ( originalPosition , 5 ,a);
 
         // 아래쪽으로 이동한 위치
         Vector3 newPosition = originalPosition;
         newPosition. y -= 0.3f; // 이동할 거리
 
         // 아래쪽으로 이동한 위치에 오브젝트 생성
-        InstantiateRow ( newPosition , 5 );
+        InstantiateRow ( newPosition , 5,a );
 
         // 원래 오브젝트 삭제
         Destroy ( this. gameObject );
     }
 
-    void InstantiateRow ( Vector3 startPosition , int count )
+    void InstantiateRow ( Vector3 startPosition , int count,float a )
     {
         // 시작 위치부터 count 개수만큼의 오브젝트를 생성합니다.
         for ( int i = 0 ; i < count ; i++ )
@@ -813,6 +825,13 @@ public class Box : MonoBehaviour
             // 오브젝트를 생성하고, 오른쪽으로 이동합니다.
             Vector3 position = startPosition + new Vector3 ( 0.3f * i , 0 , 0 );
             GameObject newObj = Instantiate ( Only_Sq10 , position , Quaternion. identity );
+
+            // 1개짜리 10개 소환할 때 속성 설정
+            newObj. name = Only_Sq10. name;
+            Color color = newObj. GetComponent<SpriteRenderer> ( ). color; // 현재 색상을 가져옴
+            color. a = a; // 알파값을 변경
+            newObj. GetComponent<SpriteRenderer> ( ). color = color; // 변경된 색상을 다시 설정
+            newObj. GetComponent<Drag_4th> ( ). killChance = true;
             newObj. transform. parent = GameObject. Find ( "4Scene_RootGameObject" ). transform;
         }
     }

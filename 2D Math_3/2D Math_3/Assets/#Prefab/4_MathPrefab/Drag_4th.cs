@@ -28,11 +28,16 @@ public class Drag_4th : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private void Awake()
     {
+
         dragmode = GameObject.Find("DragManager").GetComponent<DragMode>();
         drawable = GameObject.Find("DrawMaster").GetComponent<FreeDraw.Drawable>();
         ObjBox = GameObject.Find("ObjBox");
         originPosition = this.transform.position;       // 물체를 원 위치에 복사하기 위한 값 초기화
         spriteRenderer = GetComponent<SpriteRenderer> ( );
+    }
+    private void OnEnable ( )
+    {
+        
     }
     private void Update()
     {
@@ -272,12 +277,17 @@ public class Drag_4th : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             isRight = true;
         }
 
-        if ( other. gameObject. name =="Sq1" || other. gameObject. name == "Sq10" )
+        
+    }
+
+    public void OnTriggerStay2D ( Collider2D other )
+    {
+        if ( other. gameObject. name == "Sq1" || other. gameObject. name == "Sq10" )
         {
             duplicatedObj = other. gameObject;
         }
-    }
 
+    }
     public void OnTriggerExit2D ( Collider2D other )
     {
         if ( other. CompareTag ( "4_MinusLeft" ) && this. gameObject. name == "Sq10" ) // 10도형은 왼쪽에서 투명화

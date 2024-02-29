@@ -257,7 +257,39 @@ namespace FreeDraw
                     Destroy ( bGmanager6. BoxList [ i ] );
                 }
             }
-           
+            if ( GameObject. Find ( "5Scene_RootGameObject" ) != null && GameObject. Find ( "5Scene_RootGameObject" ). activeSelf )
+            {
+                bGmanager1 = GameObject. Find ( "BackGround_1" ). GetComponent<BGmanager1> ( );
+                bGmanager2 = GameObject. Find ( "BackGround_2" ). GetComponent<BGmanager2> ( );
+                bGmanager3 = GameObject. Find ( "BackGround_3" ). GetComponent<BGmanager1> ( );
+                bGmanager4 = GameObject. Find ( "BackGround_4" ). GetComponent<BGmanager2> ( );
+                bGmanager5 = GameObject. Find ( "10ResetOnly" ). GetComponent<BGmanager1> ( );
+                bGmanager6 = GameObject. Find ( "1ResetOnly" ). GetComponent<BGmanager2> ( );
+                for ( int i = bGmanager1. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager1. BoxList [ i ] );
+                }
+                for ( int i = bGmanager2. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager2. BoxList [ i ] );
+                }
+                for ( int i = bGmanager3. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager3. BoxList [ i ] );
+                }
+                for ( int i = bGmanager4. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager4. BoxList [ i ] );
+                }
+                for ( int i = bGmanager5. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager5. BoxList [ i ] );
+                }
+                for ( int i = bGmanager6. BoxList. Count - 1 ; i >= 0 ; i-- )
+                {
+                    Destroy ( bGmanager6. BoxList [ i ] );
+                }
+            }
         }
         public void ResetAllCan2Scene() // 색 4도형 타일
         {

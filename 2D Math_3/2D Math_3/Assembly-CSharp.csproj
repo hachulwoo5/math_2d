@@ -98,6 +98,7 @@
     <Compile Include="Assets\#Scripts\Drag.cs" />
     <Compile Include="Assets\#Scripts\Drawing.cs" />
     <Compile Include="Assets\#Scripts\1Scene\ResetMaster.cs" />
+    <Compile Include="Assets\#Prefab\5_MathPrefab\Drag_5th.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
