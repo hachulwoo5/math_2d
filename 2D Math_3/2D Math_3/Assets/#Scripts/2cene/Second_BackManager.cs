@@ -70,15 +70,15 @@ public class Second_BackManager : MonoBehaviour
                     // return 수치들은 얼마나 띄울건지, 콜라이더 길이로 편하게 로직 짜고 싶었는데 polygon 오각형 오브젝트가 엉망이라 수동으로 함..
                     // 아래 수치를 변경하면 복사할 때 도형 크기(1~5)마다 생성되는 거리를 조절 가능 
                     case 1:
-                        return 0.25f;
+                        return 0.2f;
                     case 2:
-                        return 0.32f; // 예시값, 필요에 따라 변경 가능
+                        return 0.3f; // 예시값, 필요에 따라 변경 가능
                     case 3:
                         return 0.4f; // 예시값, 필요에 따라 변경 가능
                     case 4:
-                        return 0.45f; // 예시값, 필요에 따라 변경 가능
+                        return 0.475f; // 예시값, 필요에 따라 변경 가능
                     case 5:
-                        return 0.55f; // 예시값, 필요에 따라 변경 가능
+                        return 0.58f; // 예시값, 필요에 따라 변경 가능
                     default:
                         return 0f; // 예외 처리
                 }
@@ -90,7 +90,6 @@ public class Second_BackManager : MonoBehaviour
             if ( second_SizeMultiple. SizeText >= 1 && second_SizeMultiple. SizeText <= 5 )
             {
                 float correctionValue = GetCorrectionValue ( second_SizeMultiple. SizeText );
-
                 CopyObjSpawn = new Vector3 (
                     BackGroundList [ BackGroundList. Count - 1 ]. transform. position. x + correctionValue ,
                     BackGroundList [ BackGroundList. Count - 1 ]. transform. position. y ,
@@ -111,5 +110,44 @@ public class Second_BackManager : MonoBehaviour
 
 
 
+    }
+
+    float GetCorrectionValueBasedOnCollider ( Collider2D collider )
+    {
+        float distance = 0f;
+
+        if ( collider is BoxCollider2D )
+        {
+            BoxCollider2D boxCollider = ( BoxCollider2D ) collider;
+            distance = boxCollider. size. x / 2f;
+        }
+        else if ( collider is CircleCollider2D )
+        {
+            CircleCollider2D circleCollider = ( CircleCollider2D ) collider;
+            distance = circleCollider. radius;
+        }
+        else if ( collider is PolygonCollider2D )
+        {
+            PolygonCollider2D polygonCollider = ( PolygonCollider2D ) collider;
+
+            float minX = float. MaxValue;
+            float maxX = float. MinValue;
+
+            foreach ( Vector2 point in polygonCollider. points )
+            {
+                if ( point. x < minX )
+                    minX = point. x;
+                if ( point. x > maxX )
+                    maxX = point. x;
+            }
+
+            distance = maxX - minX;
+        }
+        else
+        {
+            Debug. LogError ( "지원되지 않는 Collider 유형입니다." );
+        }
+
+        return distance;
     }
 }
