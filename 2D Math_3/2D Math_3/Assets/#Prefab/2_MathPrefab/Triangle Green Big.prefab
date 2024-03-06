@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4610538203830057661}
   - component: {fileID: -5719480933289577384}
   - component: {fileID: -787927016333391449}
+  - component: {fileID: 7540907754744957425}
   m_Layer: 8
   m_Name: Triangle Green Big
   m_TagString: Green
@@ -153,3 +154,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &7540907754744957425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083869211658519835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

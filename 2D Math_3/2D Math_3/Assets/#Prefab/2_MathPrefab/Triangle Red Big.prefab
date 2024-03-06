@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1386986264011635230}
   - component: {fileID: -2277157521987720438}
   - component: {fileID: -6079156886304639078}
+  - component: {fileID: 2108726500064315304}
   m_Layer: 8
   m_Name: Triangle Red Big
   m_TagString: Red
@@ -153,3 +154,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &2108726500064315304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7658921634268022200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

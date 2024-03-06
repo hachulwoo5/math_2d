@@ -18,7 +18,7 @@ public class Second_BackManager : MonoBehaviour
     {
         shapesSpawnArea = GameObject.Find("ShapeSpawnColiider").GetComponent<ShapesSpawnArea>();
         Second_gameManager = GameObject.Find("GameManager").GetComponent<Second_GameManager>();
-        ObjBox = GameObject.Find("ObjBox");
+        ObjBox = GameObject.Find("ObjBox2");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

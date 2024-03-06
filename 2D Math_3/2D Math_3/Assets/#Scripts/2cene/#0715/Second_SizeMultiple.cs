@@ -37,7 +37,7 @@ public class Second_SizeMultiple : MonoBehaviour
     void Awake()
     {
         shapesSpawnArea = GameObject.Find("ShapeSpawnColiider").GetComponent<ShapesSpawnArea>();
-        ObjBox = GameObject.Find("ObjBox");
+        ObjBox = GameObject.Find("ObjBox2");
         pos1= GameObject.Find("Circle Green").transform.position;
         pos2 = GameObject.Find("Circle Red").transform.position;
         pos3 = GameObject.Find("Circle Blue").transform.position;

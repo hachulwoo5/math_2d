@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7630675125563799725}
   - component: {fileID: 6530834391978176832}
   - component: {fileID: -594039678930731757}
+  - component: {fileID: 2736417395983301218}
   m_Layer: 9
   m_Name: Pentagon Yellow Small
   m_TagString: Yellow
@@ -281,3 +282,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &2736417395983301218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194578244846241547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

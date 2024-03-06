@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8751381152382965900}
   - component: {fileID: -157725527483698814}
   - component: {fileID: -2934649720494085636}
+  - component: {fileID: 5422913369845112154}
   m_Layer: 8
   m_Name: Rectangle Green
   m_TagString: Green
@@ -148,3 +149,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &5422913369845112154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480800739403562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

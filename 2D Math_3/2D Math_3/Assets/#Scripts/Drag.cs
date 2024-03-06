@@ -17,6 +17,7 @@ public class Drag : MonoBehaviour, IPointerUpHandler
     ResetAllBt resetAllBt;
     GameManager gameManager;
     BackGruondManager backGruondManager;
+    MouseHandler mouseHandler;
     ResetMaster reset;
 
     public bool isDraging;
@@ -32,9 +33,10 @@ public class Drag : MonoBehaviour, IPointerUpHandler
         resetAllBt = GameObject.Find("ColorUi_Init").GetComponent<ResetAllBt>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         backGruondManager = GameObject.Find("BackGround").GetComponent<BackGruondManager>();
+        mouseHandler = GameObject. Find ( "드래그매니저3" ). GetComponent<MouseHandler> ( );
 
         originPosition = this.transform.position;       // 물체를 원 위치에 복사하기 위한 값 초기화
-        ObjBox = GameObject.Find("ObjBox");
+        ObjBox = GameObject.Find("ObjBox3");
 
 
     }
@@ -46,10 +48,11 @@ public class Drag : MonoBehaviour, IPointerUpHandler
     {
 
        
-        if (this.gameObject.transform.position.x < -2f)
+        if (this.gameObject.transform.position.x < -2.6f)
         {
             // peu button, function all off
-            resetAllBt.On_OffBt();
+            mouseHandler. MouseHandleOff ( );
+            resetAllBt. On_OffBt();
             reset = GameObject. Find ( "ResetMaster3" ). GetComponent<ResetMaster> ( );
             reset. resetmaster ( );
         }
@@ -178,7 +181,9 @@ public class Drag : MonoBehaviour, IPointerUpHandler
         if (this.gameObject.transform.position.x < -2f)
         {
             // peu button, function all off
-            resetAllBt.On_OffBt();
+            mouseHandler. MouseHandleOff ( );
+
+            resetAllBt. On_OffBt();
             reset = GameObject. Find ( "ResetMaster3" ). GetComponent<ResetMaster> ( );
             reset. resetmaster ( );
         }

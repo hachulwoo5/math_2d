@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7681532188965950528}
   - component: {fileID: 151151570651667632}
   - component: {fileID: 563605950807963657}
+  - component: {fileID: 8359151903791741800}
   m_Layer: 8
   m_Name: Rectangle Blue
   m_TagString: Blue
@@ -148,3 +149,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &8359151903791741800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435571715732188134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

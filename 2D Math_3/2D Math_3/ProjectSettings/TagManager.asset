@@ -28,6 +28,8 @@ TagManager:
   - BoldBut
   - 4_MinusRight
   - 4_MinusLeft
+  - Undefined
+  - MouseHandler
   layers:
   - Default
   - TransparentFX

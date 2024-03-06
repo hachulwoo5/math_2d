@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3833660620908649213}
   - component: {fileID: 4624745996760730497}
   - component: {fileID: -5131844505717322264}
+  - component: {fileID: 9062070708806964266}
   m_Layer: 8
   m_Name: Rectangle Red
   m_TagString: Red
@@ -148,3 +149,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &9062070708806964266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495941894123955547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

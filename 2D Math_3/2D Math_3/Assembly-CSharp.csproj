@@ -57,16 +57,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\#Scripts\Manager.cs" />
+    <Compile Include="Assets\#Scripts\Mouse\MouseHandlerObject.cs" />
     <Compile Include="Assets\#Scripts\Common\PenManager.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\BGmanager1.cs" />
     <Compile Include="Assets\#Scripts\Scene1Manager.cs" />
     <Compile Include="Assets\#Scripts\DragMode.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\BGmanager6.cs" />
+    <Compile Include="Assets\#Scripts\Mouse\DragObject.cs" />
     <Compile Include="Assets\#Scripts\Drawable.cs" />
     <Compile Include="Assets\#Scripts\BackGroundScritps\BGmanager3.cs" />
     <Compile Include="Assets\#Scripts\Total.cs" />
+    <Compile Include="Assets\#Scripts\Mouse\MouseHandlerObject_3th.cs" />
     <Compile Include="Assets\#Scripts\2cene\Second_BackManager.cs" />
     <Compile Include="Assets\#Scripts\2cene\PersistentObject.cs" />
+    <Compile Include="Assets\#Scripts\Mouse\MouseHandler_3th.cs" />
     <Compile Include="Assets\#Scripts\Combine.cs" />
     <Compile Include="Assets\#Scripts\ShapesSpawnArea.cs" />
     <Compile Include="Assets\#Scripts\ActiveOnObj.cs" />
@@ -99,6 +103,7 @@
     <Compile Include="Assets\#Scripts\Drawing.cs" />
     <Compile Include="Assets\#Scripts\1Scene\ResetMaster.cs" />
     <Compile Include="Assets\#Prefab\5_MathPrefab\Drag_5th.cs" />
+    <Compile Include="Assets\#Scripts\Mouse\MouseHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

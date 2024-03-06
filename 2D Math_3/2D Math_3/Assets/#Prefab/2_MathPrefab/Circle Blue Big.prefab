@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3295537092150489883}
   - component: {fileID: -2836473960178577753}
   - component: {fileID: 2080029280541905259}
+  - component: {fileID: -7409467135911799720}
   m_Layer: 8
   m_Name: Circle Blue Big
   m_TagString: Blue
@@ -138,3 +139,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &-7409467135911799720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109833880470752445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

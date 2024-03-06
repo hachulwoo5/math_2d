@@ -17,7 +17,7 @@ public class Second_Drag : MonoBehaviour
     ResetAllBt resetAllBt;
     GameManager gameManager;
     Second_BackManager backGruondManager;
-
+    MouseHandler mouseHandler;
     ResetMaster reset;
 
     public bool isDraging;
@@ -34,10 +34,10 @@ public class Second_Drag : MonoBehaviour
         resetAllBt = GameObject.Find("ColorUi_Init").GetComponent<ResetAllBt>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         backGruondManager = GameObject.Find("BackGround").GetComponent<Second_BackManager>();
-
+        mouseHandler = GameObject. Find ( "드래그매니저2" ). GetComponent<MouseHandler> ( );
         originPosition = this.transform.position;       // 물체를 원 위치에 복사하기 위한 값 초기화
 
-        ObjBox = GameObject.Find("ObjBox");
+        ObjBox = GameObject.Find("ObjBox2");
 
     }
 
@@ -46,9 +46,12 @@ public class Second_Drag : MonoBehaviour
 
     private void OnMouseDown()      // 마우스 클릭시 물체 복사
     {
-        if (this.gameObject.transform.position.x < -2f)
+        if (this.gameObject.transform.position.x < -3.6f)
         {
+            Debug. Log ( this. transform. position );
+
             // peu button, function all off
+            mouseHandler. MouseHandleOff ( );
             resetAllBt.On_OffBt();
             reset = GameObject. Find ( "ResetMaster2" ). GetComponent<ResetMaster> ( );
             reset. resetmaster ( );
@@ -57,8 +60,6 @@ public class Second_Drag : MonoBehaviour
         Check = 0;
         if (dragmode.isDragMode == true)       // 드래그 모드가 켜져야 움직임, 꺼지면 그림을 그리는 모드가 되는 것
         {
-
-
             Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
             Vector3 mousePosition1 = Camera.main.ScreenToWorldPoint(mousePosition);
             // 마우스 위치를 잡아내고 변환

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8266375439769819153}
   - component: {fileID: -1230827513010009587}
   - component: {fileID: 7805799004667067249}
+  - component: {fileID: -6376319662063235551}
   m_Layer: 8
   m_Name: Triangle Blue Small
   m_TagString: Blue
@@ -153,3 +154,15 @@ MonoBehaviour:
   MinusPosition: {x: 0, y: 0, z: 0}
   isDraging: 0
   isOnEnable: 0
+--- !u!114 &-6376319662063235551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850745640373036983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c6d1d82cc92240872f723563d1540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

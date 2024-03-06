@@ -23,7 +23,7 @@ public class ResetMaster : MonoBehaviour
         {
             glist[i].gameObject.SetActive(true);
         }
-        for (int i = 8; i < 15; i++ )            // 팔레트 원상복구
+        for (int i = 8; i < 16; i++ )            // 팔레트 원상복구
         {
             glist[i].gameObject.SetActive(false);
         }
